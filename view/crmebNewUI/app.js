@@ -5,7 +5,7 @@
 //请前往后台【小程序】->【小程序配置】填写自己的 appId and AppSecret
 //请不要修改globalData中的其他配置，如自行开发可不用理会这句话
 //配置完以上就可以访问小程序啦
-const URL ='';
+const URL ='http://localhost';
 
 const util = require('utils/util.js');
 
