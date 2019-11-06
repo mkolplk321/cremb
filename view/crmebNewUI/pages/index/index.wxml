@@ -106,7 +106,7 @@
                 <block wx:for="{{bastBanner}}" wx:key>
                   <swiper-item>
                 <navigator url='{{item.link}}' style='width:100%;height:100%;' hover-class='none'>
-                    <image src="{{item.img}}" class="slide-image" data-idx='{{index}}'/>
+                    <image src="https://www.dydtech.cn:8091/public/uploads/attach/2019/10/19/5daabe18934e9.jpg" class="slide-image" data-idx='{{index}}'/>
                     </navigator>
                   </swiper-item>
                 </block>

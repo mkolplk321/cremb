@@ -1,4 +1,4 @@
-// pages/my-promotion/index.js
+ // pages/my-promotion/index.js
 const app = getApp();
 Page({
 
