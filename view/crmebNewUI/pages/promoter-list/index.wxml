@@ -6,12 +6,21 @@
                 <view class='name'>推广人数</view>
                 <view><text class='num'>{{teamCount}}</text>人</view>
             </view>
+            <view>
+                <view class='name'>推广等级</view>
+                <view><text class='num'>{{postLevel}}</text></view>
+            </view>
+            <view>
+                <view class='name'>级别生成时间</view>
+                <view><text class='num'>{{levelTime}}</text></view>
+            </view>
             <view class='iconfont icon-tuandui'></view>
         </view>
     </view>
     <view class='nav acea-row row-around'>
         <view class="{{grade == 0 ? 'item on' : 'item'}}" bindtap='setType' data-grade='0'>一级({{total}})</view>
         <view class="{{grade == 1 ? 'item on' : 'item'}}" bindtap='setType' data-grade='1'>二级({{totalLevel}})</view>
+        <view class="{{grade == 2 ? 'item on' : 'item'}}" bindtap='setType' data-grade='2'>三级({{totalSubLevel}})</view>
     </view>
     <view class='search acea-row row-between-wrapper'>
         <view class='input'><input placeholder='点击搜索会员名称' placeholder-class='placeholder' value='{{keyword}}' bindblur='setKeyword'></input><text class='iconfont icon-guanbi'></text></view>
@@ -53,6 +62,7 @@
                   <view class='pictrue'><image src='{{item.avatar}}'></image></view>
                   <view class='text'>
                       <view class='name line1'>{{item.nickname}}</view>
+                      <view class='name line1' hidden="{{item.ispromoter}}">经销商</view>
                       <view>加入时间: {{item.time}}</view>
                   </view>
               </view>

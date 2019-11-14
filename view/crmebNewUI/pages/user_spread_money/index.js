@@ -46,6 +46,8 @@ Page({
       this.setData({ 'parameter.title': '提现记录', name: '提现总额', recordType: 4 });
     } else if (type == 2) {
       this.setData({ 'parameter.title': '佣金记录', name: '佣金明细', recordType: 3 });
+    } else if (type == 3) {
+      this.setData({ 'parameter.title': '待到账佣金记录', name: '待到账佣金明细', recordType: 5 });
     } else {
       wx.showToast({
         title: '参数错误',

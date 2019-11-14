@@ -23,6 +23,10 @@ Page({
     grade:0,
     status: false,
     recordList:[],
+    totalUseful:0,
+    totalLevelUseful:0,
+    totalSubLevelUseful:0,
+    postLevel:"经销商",
   },
 
   /**
@@ -106,7 +110,13 @@ Page({
       that.setData({
         total: res.data.total,
         totalLevel: res.data.totalLevel,
-        teamCount: Number(res.data.total) + Number(res.data.totalLevel),
+        totalSubLevel: res.data.totalSubLevel,
+        totalUseful: res.data.totalUseful,
+        totalLevelUseful: res.data.totalLevelUseful,
+        totalSubLevelUseful: res.data.totalSubLevelUseful,
+        postLevel: (res.data.totalUseful > 30 && res.data.totalLevelUseful < 900) ? "经理" : (res.data.totalUseful > 30 && res.data.totalLevelUseful > 900) ? "总监" : "经销商",
+        teamCount: Number(res.data.total) + Number(res.data.totalLevel) + Number(res.data.totalSubLevel),
+        levelTime: res.data.levelTime ? res.data.levelTime:recordListNew[recordListNew.length - 1].time,
         status: limit > len, 
         page: limit + page, 
         recordList: recordListNew 

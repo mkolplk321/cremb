@@ -95,7 +95,7 @@
      <view class='wrapper'>
        <view class='title acea-row row-between-wrapper'>
           <view class='text'>
-             <view class='name line1'>精品推荐</view>
+             <view class='name line1'>赢消部落<text class='new font-color'>省~</text></view>
              <view class='line1'>{{bastInfo}}</view>
           </view>
           <navigator class='more' hover-class="none" url='/pages/first-new-product/index?type=1'>更多<text class='iconfont icon-jiantou'></text></navigator>
@@ -113,6 +113,28 @@
             </swiper>
        </view>
        <goodList bastList="{{bastList}}"></goodList>
+    </view>
+         <view class='wrapper'>
+       <view class='title acea-row row-between-wrapper'>
+          <view class='text'>
+             <view class='name line1'>创业园区<text class='new font-color'>赚~</text></view>
+             <view class='line1'>{{firstInfo}}</view>
+          </view>
+          <navigator class='more' hover-class="none" url='/pages/first-new-product/index?type=3'>更多<text class='iconfont icon-jiantou'></text></navigator>
+       </view>
+       <view class='newProducts'>
+          <scroll-view class="scroll-view_x" scroll-x style="width:auto;overflow:hidden;">
+              <block wx:for="{{firstList}}" wx:key>
+                 <navigator hover-class="none" url='/pages/goods_details/index?id={{item.id}}' class='item'>
+                    <view class='img-box'>
+                      <image src='{{item.image}}'></image>
+                    </view>
+                    <view class='pro-info line1'>{{item.store_name}}</view>
+                    <view class='money font-color'>￥{{item.price}}</view>
+                  </navigator>
+              </block>  
+           </scroll-view>
+        </view>
     </view>
     <view class='hotList'>
        <view class='hot-bg'>
@@ -141,38 +163,8 @@
         <image src='{{item.img}}'></image>
       </block>  
     </view>
-     <view class='wrapper'>
-       <view class='title acea-row row-between-wrapper'>
-          <view class='text'>
-             <view class='name line1'>首发新品<text class='new font-color'>NEW~</text></view>
-             <view class='line1'>{{firstInfo}}</view>
-          </view>
-          <navigator class='more' hover-class="none" url='/pages/first-new-product/index?type=3'>更多<text class='iconfont icon-jiantou'></text></navigator>
-       </view>
-       <view class='newProducts'>
-          <scroll-view class="scroll-view_x" scroll-x style="width:auto;overflow:hidden;">
-              <block wx:for="{{firstList}}" wx:key>
-                 <navigator hover-class="none" url='/pages/goods_details/index?id={{item.id}}' class='item'>
-                    <view class='img-box'>
-                      <image src='{{item.image}}'></image>
-                    </view>
-                    <view class='pro-info line1'>{{item.store_name}}</view>
-                    <view class='money font-color'>￥{{item.price}}</view>
-                  </navigator>
-              </block>  
-           </scroll-view>
-        </view>
-    </view>
-    <view class='wrapper'>
-       <view class='title acea-row row-between-wrapper'>
-          <view class='text'>
-             <view class='name line1'>促销单品</view>
-             <view class='line1'>{{salesInfo}}</view>
-          </view>
-          <navigator class='more' hover-class="none" url='/pages/promotional-items/index'>更多<text class='iconfont icon-jiantou'></text></navigator>
-       </view>
-       <promotionGood benefit="{{benefit}}"></promotionGood>
-    </view>
+
+    
 </view>
 <coupon-window window='{{window}}' couponList="{{couponList}}" bind:onColse="onColse"></coupon-window>
 <home></home>

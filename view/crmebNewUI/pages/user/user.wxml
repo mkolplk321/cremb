@@ -6,6 +6,7 @@
          <view class='text'>
             <view class='acea-row row-middle'>
                <view class='name line1'>{{userInfo.nickname || '请授权'}}</view>
+               <view hidden="{{userInfo.sp_nickname==null}}" class='name line1'>{{"("+userInfo.sp_nickname+"推荐)"}}</view>
                <navigator hover-class='none' url='/pages/user_vip/index' class='member acea-row row-middle' wx:if="{{userInfo.vip}}">
                <image src='{{userInfo.vip_icon}}'></image>{{userInfo.vip_name}}</navigator>
             </view>

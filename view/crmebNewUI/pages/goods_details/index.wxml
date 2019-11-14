@@ -70,7 +70,7 @@
           <view class='iconn'></view>
           发送给朋友
          </button>
-        <button class='contact' bindtap='goPoster' hover-class='none'>
+        <button hidden="{{sharePacket.isState}}" class='contact' bindtap='goPoster' hover-class='none'>
           <view class='iconn iconn1'></view>
           生成海报
         </button>

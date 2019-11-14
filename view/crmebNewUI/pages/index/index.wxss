@@ -30,8 +30,8 @@ page{background-color:#fff!important;}
 .index .specialArea .item .text{position:absolute;top:23rpx;left:28rpx;}
 .index .wrapper .title{border-top:1rpx solid #eee;padding-top:34rpx;margin:0 30rpx;}
 .index .wrapper .title .text{font-size:24rpx;color:#999;width:530rpx;}
-.index .wrapper .title .text .name{color:#282828;font-size:30rpx;font-weight:bold;margin-bottom:5rpx;position:relative;}
-.index .wrapper .title .text .name .new{position:absolute;top:2rpx;left:130rpx;font-size:16rpx;font-weight:bold;}
+.index .wrapper .title .text .name{color:#282828;font-size:40rpx;font-weight:bold;margin-bottom:5rpx;position:relative;}
+.index .wrapper .title .text .name .new{position:absolute;top:2rpx;left:170rpx;font-size:16rpx;font-weight:bold;}
 .index .wrapper .title .more{font-size:26rpx;color:#333;}
 .index .wrapper .title .more .iconfont{margin-left:9rpx;font-size:26rpx;vertical-align:3rpx;}
 .index .wrapper .scroll-product{white-space:nowrap;margin-top:38rpx;padding:0 30rpx 37rpx 30rpx;}

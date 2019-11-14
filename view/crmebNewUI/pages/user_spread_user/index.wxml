@@ -35,6 +35,10 @@
             <text class='iconfont icon-dingdan'></text>
             <view>推广人订单</view>
         </navigator>
+        <navigator url='/pages/user_spread_money/index?type=3' hover-class="none" class='item acea-row row-center-wrapper row-column'>
+            <text class='iconfont icon-qiandai'></text>
+            <view>待到账佣金明细</view>
+        </navigator>
     </view>
 </view>
 <authorize bind:onLoadFun='onLoadFun'></authorize>
